@@ -1,4 +1,5 @@
 ﻿using ISurvey.Interfaces;
+using ISurvey.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ISurvey.Controllers
@@ -14,7 +15,8 @@ namespace ISurvey.Controllers
 
         public IActionResult Index()
         {
-            return View(surveyRepository.GetSurvey(1));
+            SurveyViewModel model = new SurveyViewModel(surveyRepository.GetSurvey(1));
+            return View(model);
         }
     }
 }

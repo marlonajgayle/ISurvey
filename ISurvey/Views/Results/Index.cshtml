@@ -1,4 +1,4 @@
-﻿
+﻿@model ISurvey.Models.SurveyViewModel
 @{
     ViewData["Title"] = "Survey Results";
 }
@@ -10,7 +10,7 @@
                 <h6 class="text-light font-weight-bold mb-0 text-uppercase" style="font-size: 12px;">Question:</h6>
             </div>
             <div class="card-body">
-                <p class="card-text font-weight-bold h6 m-0">What should we have for lunch?</p>
+                <p class="card-text font-weight-bold h6 m-0">@Model.Question</p>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
            </div>
            <div class="card-body" style="padding: 5px;">
               <div class="text-dark text-center font-weight-bold align-content-center" style="font-size: 40px;">
-                  42
+                 @Model.TotalVotes
               </div>
            </div>
        </div>
@@ -32,20 +32,19 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between align-content-center" style="padding: 5px; background-color: #2c3e50;">
                 <h6 class="text-light mb-0 text-uppercase" style="font-size: 12px;">1st Place</h6>
-                
             </div>
             <div class="card-body" style="padding: 5px;">
                 <div class="row">
                     <div  class="col-10 col-md-12 mb-0">
-                        <div class="text-dark font-weight-bold mb-0"style="font-size: 20px;">Chicken Satsu</div>
+                        <div class="text-dark font-weight-bold mb-0"style="font-size: 20px;">@Model.Choices[0].Name</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6 col-md-12 mb-0">
-                        <span class="font-weight-bold" style="font-size:20px;">16</span> votes
+                        <span class="font-weight-bold" style="font-size:20px;">@Model.Choices[0].Votes</span> votes
                     </div>
                     <div class="col">
-                        <span class="font-weight-bold" style="font-size: 20px;">38%</span> voted
+                        <span class="font-weight-bold" style="font-size: 20px;">55%</span> voted
                     </div>
                 </div>
             </div>
@@ -59,13 +58,13 @@
                 <div class="row no-gutters">
                     <div class="col-4 mr-2 mb-0">
                         <div class="text-light text-uppercase mb-0" style="font-size: 10px;">2nd Place</div>
-                        <div class="text-light font-weight-bold mb-0">Steak and eggs</div>
+                        <div class="text-light font-weight-bold mb-0">@Model.Choices[1].Name</div>
                     </div>
                     <div class="col-4 bg-light border-right" style="padding: 5px;">
-                        <span class="font-weight-bold" style=" font-size: 20px; padding-left: 5px;">16</span> votes
+                        <span class="font-weight-bold" style=" font-size: 20px; padding-left: 5px;">@Model.Choices[1].Votes</span> votes
                     </div>
                     <div class="col bg-light" style="padding: 5px;">
-                        <span class="font-weight-bold" style="font-size: 20px; padding-left: 10px;">38%</span> voted
+                        <span class="font-weight-bold" style="font-size: 20px; padding-left: 10px;">27%</span> voted
                     </div>
                 </div>
             </div>
@@ -79,13 +78,13 @@
                 <div class="row no-gutters">
                     <div class="col-4 mr-2 mb-0">
                         <div class="text-light text-uppercase mb-0" style="font-size: 10px;">3rd Place</div>
-                        <div class="text-light font-weight-bold mb-0">Steak and eggs</div>
+                        <div class="text-light font-weight-bold mb-0">@Model.Choices[2].Name</div>
                     </div>
                     <div class="col-4 bg-light border-right" style="padding: 5px;">
-                        <span class="font-weight-bold" style="font-size:20px; padding-left: 5px;">16</span> votes
+                        <span class="font-weight-bold" style="font-size:20px; padding-left: 5px;">@Model.Choices[2].Votes</span> votes
                     </div>
                     <div class="col bg-light" style="padding: 5px;">
-                        <span class="font-weight-bold" style="font-size: 20px; padding-left: 15px;">38%</span> voted
+                        <span class="font-weight-bold" style="font-size: 20px; padding-left: 15px;">17%</span> voted
                     </div>
                 </div>
             </div>
