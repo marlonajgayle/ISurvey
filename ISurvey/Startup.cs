@@ -27,6 +27,7 @@ namespace ISurvey
         {
             services.AddControllersWithViews();
             services.AddSingleton<ISurveyRepository, MockSurveyRepository>();
+            services.AddApplicationInsightsTelemetry("fbcc84fc-dcca-44c5-b241-e87b58250f83");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
