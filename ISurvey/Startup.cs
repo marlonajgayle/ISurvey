@@ -53,7 +53,7 @@ namespace ISurvey
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Results}/{action=Index}/{id?}");
             });
         }
     }
