@@ -40,6 +40,7 @@ namespace ISurveyTests
                 }
             );
             Assert.Equal(29, model.TotalVotes);
+            Assert.Equal("What should we have for lunch?", model.Question);
         }
     }
 }
