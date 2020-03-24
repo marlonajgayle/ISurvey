@@ -15,7 +15,7 @@ namespace ISurvey.Repositories
                 new Survey()
                 {
                     SurveyId = 1,
-                    Question = "What should we have for lunch?",
+                    Question = "What should we have for Dinner?",
                     Choices = new List<Choice>()
                     {
                         new Choice() { ChoiceId = 1, Name = "Chicken Katsu", Votes = 16 },
