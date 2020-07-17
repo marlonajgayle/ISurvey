@@ -20,6 +20,7 @@ namespace ISurvey.Controllers
 
         public IActionResult Index()
         {
+             throw new Exception("Error on Home page: 500 error thrown!");
             return View();
         }
 
